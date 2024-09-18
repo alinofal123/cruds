@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js project</title>
+</head>
+<style>
+    body {
+        /* height: 1000px; */
+    }
+    input {
+        margin: 5px;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        color: white;
+        background-color: #111;
+    }
+    input:focus {
+        background-color: #000;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    button {
+        background-color: rgb(67, 1, 129);
+        /* margin: 0 50px 0 50px; */
+        transition: 0.5s;
+    }
+    button:hover {
+        background-color: blueviolet;
+        letter-spacing: 1px;
+    }
+    .search {
+        display: block;
+        margin: auto;
+    }
+    .searchbtn  {
+        margin: 0 50px 0 50px;
+    }
+    .tbody {
+        margin-top: 20px auto;
+    }
+    td {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    table th {
+        text-transform: uppercase;
+    }
+    #total::before {
+        content: 'Total:';
+    }
+    #deletAll {
+        margin: 20px 0;
+    }
+</style>
+<body class="bg-dark text-center container">
+    <div class="countainer py-2 text-center text-white">
+        <h1 class="text-uppercase">Cruds</h1>
+        <h3>PRODUCT MANAGEMEANT SYSTEM</h3>
+    </div>
+
+        <input class="w-75  border-0 rounded" type="text" name="" id="title" placeholder="title">
+    <div class="d-flex justify-content-center align-items-center mt-3 ">
+        <input onkeyup="gettotal()" class=" border-0 rounded" type="text" name="" id="price" placeholder="price">
+        <input onkeyup="gettotal()" class=" border-0 rounded" type="text" name="" id="taxes" placeholder="taxes">
+        <input onkeyup="gettotal()" class=" border-0 rounded" type="text" name="" id="ads" placeholder="ads">
+        <input onkeyup="gettotal()" class=" border-0 rounded" type="text" name="" id="discount" placeholder="discount">
+        <h3 id="total" class="text-white"></h3>
+    </div>
+
+    <div class="">
+        <input class="w-75 border-0 rounded" type="text" name="" id="count" placeholder="count">
+        <input class="w-75 border-0 rounded" type="text" name="" id="category" placeholder="category">
+    </div>
+
+    <button id="submit" class="w-75 rounded-pill border-0 text-white mt-2 py-2">Creat</button>
+    <input onkeyup="searchinput(this.value)" class="search w-75 border-0 rounded mt-3 mb-3" type="text" name="" id="search" placeholder="search">
+    <div class="container">
+        <div class="searchblock">
+            
+
+            <button onclick="searchdata(this.id)" id="searchtitle" class="searchbtn rounded-pill border-0 text-white py-2">search by title </button>
+            <button onclick="searchdata(this.id)" id="searchcategory" class="searchbtn rounded-pill border-0 text-white py-2">search by category</button>
+            
+            <div id="deletAll">
+
+            </div>
+            <table class="text-white w-100 mt-4 text-center">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delet</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<script src="app.js" type=""></script>
+<script src="main.js" type=""></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
